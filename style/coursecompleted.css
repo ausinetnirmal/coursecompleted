@@ -208,3 +208,35 @@
     background-color:#373a3c;
     transition: all 0.2s ease-out;
   }
+  
+
+.containercon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.course-completed-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    padding: 50px 20px 40px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Keep the text and buttons usable while confetti overlaps them. */
+.course-completed-content h1,
+.course-completed-content #notice,
+.course-completed-content .continuebutton {
+    position: relative;
+    z-index: 1;
+}
+

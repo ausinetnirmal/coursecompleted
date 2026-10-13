@@ -97,7 +97,7 @@ foreach($enrolinstances as $instance) {
 $PAGE->set_title($course->shortname);
 $PAGE->set_heading($course->fullname);
 //$PAGE->navbar->add(get_string('enrolmentoptions','enrol'));
-$PAGE->requires->css('/local/coursecompleted/style/coursecompleted.css');
+$PAGE->requires->css('/local/coursecompleted/style/coursecompleted.css?v=1');
 echo $OUTPUT->header();
 
 //TODO: find if future enrolments present and display some info
@@ -121,9 +121,9 @@ if (!$forms) {
              
                 $PAGE->requires->js('/local/coursecompleted/js/coursecompleted.js');
         ?>             
-          
+          <div style="position:relative;">
             <div class="js-container containercon"></div>
-            <div style="text-align:center;margin-top:50px;position:absolute;width:100%;height:100%;top:0px;left:0px;">
+            <div class="course-completed-content">
                 <div class="checkmark-circle">
                      <div class="background"></div>
                     <div class="checkmark draw"></div>
@@ -137,7 +137,7 @@ if (!$forms) {
                 }
                 //echo get_string('coursecompmsg', 'enrol', $a);               
                 notice(get_string('coursecompmsg', 'enrol', $a),$url);             
-        ?> </div></div>
+        ?> </div></div></div>
         <?php
             }
             else{
